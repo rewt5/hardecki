@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neat Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #5caf48;
+            padding: 32px;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        main {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+        }
+    
+        /* Add a container with display: flex to position the buttons */
+        .buttonContainer {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+        
+        /* Add your button styles here */
+        .customButton {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#fubarButton {
+    background-color: #4CAF50;
+}
+
+#alienButton {
+    background-color: #800000;
+}
+
+#fubarButton:hover {
+    background-color: #45a049;
+}
+
+
+    /* Add a hover effect to your button */
+        #fubarButton:hover {
+          background-color: #45a049;
+        }
+      </style>
+</head>
+<body>
+    <header>
+        <h1>Neat Demo</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+        <style>
+            p {
+                line-height: 1.4;
+                margin-bottom: 20px;
+            }
+        </style>    
+    </header>        
+    <main>
+        <h1>Welcome to the Neat Demo!</h1>
+
+        <p>This is a complex and neat demo HTML file showcasing some basic HTML tags and CSS styling. It includes a header, a title, and a paragraph with text content. You can customize this demo by adding more elements or changing the existing styles.</p>
+
+        <p>    Dies ist eine komplexe und übersichtliche Demo-HTML-Datei, die einige grundlegende HTML-Tags und CSS-Stile zeigt. Es enthält eine Überschrift, einen Titel und einen Absatz mit Textinhalt. Sie können diese Demo anpassen, indem Sie weitere Elemente hinzufügen oder die vorhandenen Stile ändern.</p>
+
+        <p>    これは、基本的なHTMLタグとCSSスタイリングを示す複雑で整ったデモHTMLファイルです。ヘッダー、タイトル、テキストコンテンツを含む段落が含まれています。このデモに要素を追加したり、既存のスタイルを変更したりすることで、カスタマイズが可能です。</p>
+
+        <p dir=rtl></p>    هذا ملف تجريبي لـ HTML معقد وأنيق يعرض بعض الوسوم الأساسية لـ HTML وتنسيقات CSS. يتضمن الملف ترويسة وعنوان وفقرة بها محتوى نصي. يمكنك تخصيص هذا التجريبي عن طريق إضافة المزيد من العناصر أو تغيير الأنماط الموجودة.</p>
+
+        <p>    Hoc est complexum et nitidum exemplum HTML file, quod ostendit aliquas elementares HTML notas et CSS stilum. Continet caput, titulum et paragraphum cum textu contenta. Hanc demonstrationem personalizare potes, addendo plura elementa vel mutando iam existentes styles.</p>
+
+        <p>ԍʚłԃƚʢ ʆˠƈʍĿ ɗʨƞƄˮ ȥǬɮŏ ʤ˜ʒɸ ƽɖʩʘ ȼǳʫǐ Ǫȯʚƅ ȶǁɷʥ ʇɱʋʞǥ ũɔˣʧ Ǵɴʊˡ ȋʣ˛ǘ ʠǍȍʿ ǻɪʹƼ ʒʌɩǋ ȣʦɰʱ Ǥ˚ȃɭ ǹɳƗʁ Ǆɓʯɱ ʎɟʕǆ Ɔǡǎ˙ Ƕƀɶǿ ʓȡƙǃ ʔʇȿʶǖ ʼ˖ǯʍǔ Ǭɧʑɢ ȧȸǥǔ ʹɃƪǛǸ ǎʘɎƃ ǐʂɸǧ ƚǙʃɾȵ ɼƈǨǳ ɯɝǿǰ Ƌʀǹǩʌ ɶʎȶƢ ȊǖǔǱ ǷɶǣǶȬ Ƞǽȍʒ ʃƧȷǫ ȽǟǤǹ Ƕɑʡǽ Ǌɴǒǲ ǄʮȬɍǸ ȹɈǣǗ ƤǻǸǳ ʊǽǊƌ ȬǸʩǹǶ ȬǼȱɸǃ ʒǄƣǊǛ</p>
+
+        <div class="buttonContainer">
+            <button id="fubarButton" class="customButton">Go to Fubar</button>
+            <button id="alienButton" class="customButton">ǶƤǻǸǳ ʊǽǊƌ ȬǸʩǹǶ</button>
+        </div>
+    </main>
+    <script>
+
+        const fubarButton = document.getElementById('fubarButton');
+    
+        fubarButton.addEventListener('click', () => {
+          console.log('fetching /fubar')
+          fetch('/fubar').then((data) => {console.log(data)});
+          console.log('fetched /fubar')
+          //window.location.href = '/fubar';
+        });
+
+        const alienButton = document.getElementById('alienButton');
+
+        alienButton.addEventListener('click', () => {
+          console.log("alienButton was clicked");
+          window.location.href = '/black.html';
+        });
+        
+      </script>
+</body>
+</html>
